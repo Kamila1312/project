@@ -1,0 +1,113 @@
+Documentation for the Project: Tic-Tac-Toe
+
+Project Description
+
+This project is a simple browser-based Tic-Tac-Toe game built using HTML, CSS, and JavaScript. Players take turns placing "X" and "O" on a 3x3 grid. The game determines a winner when one player forms a line (horizontal, vertical, or diagonal) or ends in a draw if all cells are filled without a winner. It includes a reset button to restart the game.
+
+Main Features
+
+1. Game Board:
+   - Displayed as a 3x3 grid.
+   - Cells are dynamically created using JavaScript.
+
+2. Player Turns:
+   - Players take turns placing "X" and "O".
+   - The game starts with player `X`.
+
+3. Winner Determination:
+   - After each turn, the game checks for a winner or a draw.
+   - If no winner is found, the game continues.
+
+4. Game Reset:
+   - A "Reset" button allows players to restart the game.
+
+Technologies Used
+
+1. HTML:
+   - Structure of the game board.
+   - UI elements like the reset button and status display.
+
+2. CSS:
+   - Styling for the game board, cells, and buttons.
+   - Hover effects for interactivity.
+
+3. JavaScript:
+   - Core game logic:
+     - Handling cell clicks.
+     - Determining the winner or draw.
+   - Dynamic creation of the game board.
+   - Game state management.
+
+Code Structure
+
+1. HTML:
+   - Key Elements:
+     - `<div id="game-board">`: The game grid.
+     - `<p id="status">`: Displays the current game status.
+     - `<button id="reset">`: A button to reset the game.
+
+2. CSS:
+   - Grid styling for a 3x3 layout.
+   - Cell hover effects for better UX.
+   - Styling for buttons and text.
+
+3. JavaScript:
+   - Key Functions:
+     - `createBoard()`: Initializes the game board.
+     - `handleCellClick(event)`: Handles player turns when a cell is clicked.
+     - `checkWinner()`: Checks if the current player has won.
+     - `resetGame()`: Resets the game state and clears the board.
+   - Logic:
+     - Alternates turns between players.
+     - Updates the game status dynamically.
+     - Identifies and announces a winner or draw.
+
+How to Use
+
+1. Open the HTML file in any modern web browser.
+2. The interface includes:
+   - A 3x3 game grid.
+   - A status display showing the current player or game result.
+   - A "Reset" button to restart the game.
+3. To play:
+   - Click on any cell to place your symbol (`X` or `O`).
+   - Alternate turns until a winner is determined or the game ends in a draw.
+4. After the game ends, click "Reset" to start a new game.
+
+Example Usage
+
+1. Open the file in a browser.
+2. Player `X` clicks on a cell—`X` is placed, and the status updates to "Player O's turn".
+3. Player `O` clicks on another cell—`O` is placed, and the status updates to "Player X's turn".
+4. If a player completes a winning line, the status updates, e.g., "Player X wins!".
+5. For a new game, click the "Reset" button.
+
+Winning Logic
+
+The program checks the following winning combinations (cell indices):
+[0, 1, 2]   Top row
+[3, 4, 5]   Middle row
+[6, 7, 8]   Bottom row
+[0, 3, 6]   Left column
+[1, 4, 7]   Middle column
+[2, 5, 8]   Right column
+[0, 4, 8]   Main diagonal
+[2, 4, 6]   Secondary diagonal
+
+Future Enhancements
+
+1. Highlight Winning Combination:
+   - Add visual effects for the winning line.
+   
+2. Score Tracker:
+   - Maintain a tally of wins for `X` and `O`.
+
+3. AI Player:
+   - Implement an AI opponent using algorithms like Minimax.
+
+4. Animations:
+   - Add animations for placing symbols or resetting the board.
+
+Conclusion
+
+This project showcases the fundamentals of working with DOM manipulation, event handling, and logic implementation in JavaScript. It is a scalable project that can be extended to include advanced features like animations or AI.
